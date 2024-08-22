@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Professional Task Manager</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Task Manager</h1>
+  </header>
+  <div id="three-container"></div>
+  <main>
+    <section class="task-list">
+      <h2>Tasks</h2>
+      <div class="task-controls">
+        <input type="text" id="new-task" placeholder="Task title">
+        <input type="date" id="task-date" placeholder="Set Date">
+        <input type="time" id="task-time" placeholder="Set Time">
+        <textarea id="task-description" placeholder="Task description"></textarea>
+        <select id="task-priority">
+          <option value="low">Low Priority</option>
+          <option value="medium">Medium Priority</option>
+          <option value="high">High Priority</option>
+        </select>
+        <select id="task-category">
+          <option value="work">Work</option>
+          <option value="personal">Personal</option>
+          <option value="study">Study</option>
+        </select>
+        <button id="add-task">Add Task</button>
+        <input type="text" id="search-task" placeholder="Search tasks">
+        <select id="filter-priority">
+          <option value="">All Priorities</option>
+          <option value="low">Low</option>
+          <option value="medium">Medium</option>
+          <option value="high">High</option>
+        </select>
+        <select id="filter-category">
+          <option value="">All Categories</option>
+          <option value="work">Work</option>
+          <option value="personal">Personal</option>
+          <option value="study">Study</option>
+        </select>
+        <button id="clear-storage">Clear from Local Storage</button>
+      </div>
+      <ul id="task-items"></ul>
+    </section>
+  </main>
+
+  <!-- Edit Task Modal -->
+  <div id="edit-task-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Edit Task</h2>
+      <input type="text" id="edit-task-title" placeholder="Task title">
+      <input type="date" id="edit-task-date" placeholder="Set Date">
+      <input type="time" id="edit-task-time" placeholder="Set Time">
+      <textarea id="edit-task-description" placeholder="Task description"></textarea>
+      <select id="edit-task-priority">
+        <option value="low">Low Priority</option>
+        <option value="medium">Medium Priority</option>
+        <option value="high">High Priority</option>
+      </select>
+      <select id="edit-task-category">
+        <option value="work">Work</option>
+        <option value="personal">Personal</option>
+        <option value="study">Study</option>
+      </select>
+      <button id="save-task">Save Changes</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
